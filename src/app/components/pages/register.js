@@ -1,16 +1,20 @@
 import Image from 'next/image'
-import Input from "./components/forms/input"
-import Button from "./components/forms/button"
 
-import grass from '../../jumboassets/vetor/grass.png'
-import jumboVetor from '../../jumboassets/vetor/jumbovetor.png'
+import Button from '../forms/button'
+import Input from '../forms/input'
 
-export default function Login() {
+import grass from '../../../../jumboassets/vetor/grass.png'
+
+import jumboVetor from '../../../../jumboassets/vetor/jumbovetor.png'
+
+export default function Register() {
+
     return (
         <div className="flex flex-col h-screen w-full bg-[#EEDCBE] text-[#FFFFFF] items-center">
 
-            <div className="flex w-full h-[15vh] bg-[#EEDCBE] text-[#326377] justify-center items-center">
+            <div className="flex flex-col w-full h-[15vh] bg-[#EEDCBE] text-[#326377] justify-center items-center">
                 <p className='text-[24px] sm:text-[30px]' >Olá, me chamo <strong>Jumbo!</strong></p>
+                <p className="text-center">Seu melhor amigo no desenvolvimento pessoal</p>
             </div>
 
             {/* Imagem responsiva */}
@@ -22,37 +26,44 @@ export default function Login() {
                 className='w-[70%] sm:w-[22vw]  '
                 alt="Imagem do autor"
             />
-            <div className="w-[80%] sm:w-[24vw] h-[60vh] bg-[#326377] p-[2em] rounded-[20px]" style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
 
-                <p className="text-left">Já nos <br /> conhecemos?</p>
+            <div className="w-[80%] sm:w-[24vw] h-[55vh] sm:h-[60vh] bg-[#326377] p-[2em] rounded-[20px]" style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
 
-                <p className="font-[700] text-[24px] sm:text-[36px] text-left" >Login</p>
 
-                <p className="mt-[20px]">usuário</p>
+
+                <p className="font-[700] text-[28px] sm:text-[36px] text-start sm:text-left" >cadastro</p>
+
+                <p className="mt-[10px] text-[14px]">usuário</p>
                 <Input
                     placeholder="insira seu usuário aqui..."
                     className="mt-[10px]"
                 />
 
-                <p className="mt-[20px]">senha</p>
+                <p className="mt-[10px] text-[14px]">senha</p>
                 <Input
                     placeholder="insira sua senha aqui..."
                     className="mt-[10px]"
                     type='password'
                 />
 
-                <p className="mt-[10px] text-center sm:text-left">
-                    se ainda não nos conhecemos, <br /><a href='#' >cadastre-se</a>!
+                <p className="mt-[10px] text-[14px]">confirme a senha</p>
+                <Input
+                    placeholder="insira sua senha aqui..."
+                    className="mt-[10px]"
+                    type='password'
+                />
+                <Button
+                    text="registrar"
+                    className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] sm:w-auto"
+                />
+                <p className="mt-[10px] text-left sm:text-left text-[#ffff] text-[13px]">
+                    se já nos conhecemos, faça o <br /><a href='#' className='text-[#BFAB59]' >login</a>!
                 </p>
 
-                <Button
-                    text="entrar"
-                    className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-full sm:w-auto"
-                />
             </div>
 
             {/* Imagem inferior responsiva */}
-            <div className="w-full h-[30vh] flex justify-center items-end sm:justify-end">
+            <div className="w-full h-[20vh] flex justify-center items-end sm:justify-end">
 
                 <Image
                     src={grass}
@@ -72,7 +83,7 @@ export default function Login() {
                     src={jumboVetor}
                     width={0}
                     height={0}
-                    className="sm:w-[15%] sm:h-auto w-[50%] m-0 transform translate-x-[30px]"
+                    className="sm:w-[15%] sm:h-auto w-[50%] m-0 transform sm:translate-x-[30px] translate-y-[2.9vh] sm:translate-y-[0px]"
                     alt="Imagem do Jumbo"
                 />
                 <Image
