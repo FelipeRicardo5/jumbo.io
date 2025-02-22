@@ -1,11 +1,10 @@
 import Image from 'next/image'
 
-import Button from '../forms/button'
-import Input from '../forms/input'
+import Input from '../components/forms/input'
+import Button from '../components/forms/button'
 
-import grass from '../../../../jumboassets/vetor/grass.png'
-
-import jumboVetor from '../../../../jumboassets/vetor/jumbovetor.png'
+import grass from '../../../jumboassets/vetor/grass.png'
+import jumboVetor from '../../../jumboassets/vetor/jumbovetor.png'
 
 export default function Register() {
 
@@ -14,7 +13,7 @@ export default function Register() {
 
             <div className="flex flex-col w-full h-[15vh] bg-[#EEDCBE] text-[#326377] justify-center items-center">
                 <p className='text-[24px] sm:text-[30px]' >Olá, me chamo <strong>Jumbo!</strong></p>
-                <p className="text-center">Seu melhor amigo no desenvolvimento pessoal</p>
+                <p className="text-center text-[12px] sm:text-[18px]">Seu melhor amigo no desenvolvimento pessoal</p>
             </div>
 
             {/* Imagem responsiva */}
@@ -27,7 +26,7 @@ export default function Register() {
                 alt="Imagem do autor"
             />
 
-            <div className="w-[80%] sm:w-[24vw] h-[55vh] sm:h-[60vh] bg-[#326377] p-[2em] rounded-[20px]" style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
+            <div className="w-[80%] sm:w-[24vw] h-[55vh] sm:h-[60vh] bg-[#326377] sm:p-[2em] pl-[1em] pr-[1em] pt-[1em] pb-[1em] rounded-[20px]" style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
 
 
 
@@ -54,10 +53,10 @@ export default function Register() {
                 />
                 <Button
                     text="registrar"
-                    className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] sm:w-auto"
+                    className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] text-[12px] sm:text-[16px] sm:w-auto"
                 />
                 <p className="mt-[10px] text-left sm:text-left text-[#ffff] text-[13px]">
-                    se já nos conhecemos, faça o <br /><a href='#' className='text-[#BFAB59]' >login</a>!
+                    se já nos conhecemos, faça o <br /><a href='/login' className='text-[#BFAB59]' >login</a>!
                 </p>
 
             </div>

@@ -1,15 +1,14 @@
 import "./globals.css";
-
-import Chat from "./components/pages/chat";
-import Login from './login'
-import Register from "./components/pages/register";
-import Chatbot from "./components/pages/teste";
+import Chat from "./chat/page";
+import Login from "./login/page";
+import Register from "./register/page";
+import Chatbot from "./teste/page";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className="">
-        <Register/>
+        <Login />
       </body>
     </html>
   );
