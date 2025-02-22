@@ -1,14 +1,14 @@
 import Image from 'next/image'
 
-import Input from '../components/forms/input'
-import Button from '../components/forms/button'
+import Input from './components/forms/input'
+import Button from './components/forms/button'
 
-import grass from '../../../jumboassets/vetor/grass.png'
-import jumboVetor from '../../../jumboassets/vetor/jumbovetor.png'
+import grass from '../../jumboassets/vetor/grass.png'
+import jumboVetor from '../../jumboassets/vetor/jumbovetor.png'
 
 export default function Login() {
     return (
-        <div className="flex flex-col h-screen w-full bg-[#EEDCBE] text-[#FFFFFF] items-center">
+        <div className="flex flex-col h-dvh w-full bg-[#EEDCBE] text-[#FFFFFF] items-center">
 
             <div className="flex w-full h-[15vh] bg-[#EEDCBE] text-[#326377] justify-center items-center">
                 <p className='text-[24px] sm:text-[30px]'>Olá, me chamo <strong>Jumbo!</strong></p>

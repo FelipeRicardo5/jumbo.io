@@ -9,7 +9,7 @@ import jumboVetor from '../../../jumboassets/vetor/jumbovetor.png'
 export default function Register() {
 
     return (
-        <div className="flex flex-col h-screen w-full bg-[#EEDCBE] text-[#FFFFFF] items-center">
+        <div className="flex flex-col h-dvh w-full bg-[#EEDCBE] text-[#FFFFFF] items-center">
 
             <div className="flex flex-col w-full h-[15vh] bg-[#EEDCBE] text-[#326377] justify-center items-center">
                 <p className='text-[24px] sm:text-[30px]' >Olá, me chamo <strong>Jumbo!</strong></p>
@@ -56,7 +56,7 @@ export default function Register() {
                     className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] text-[12px] sm:text-[16px] sm:w-auto"
                 />
                 <p className="mt-[10px] text-left sm:text-left text-[#ffff] text-[13px]">
-                    se já nos conhecemos, faça o <br /><a href='/login' className='text-[#BFAB59]' >login</a>!
+                    se já nos conhecemos, faça o <br /><a href='/' className='text-[#BFAB59]' >login</a>!
                 </p>
 
             </div>

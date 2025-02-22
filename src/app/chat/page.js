@@ -54,7 +54,7 @@ export default function Chat() {
     const resultado = 'concluido';
 
     return (
-        <div className="static flex flex-row h-screen w-full bg-[#EEDCBE] text-[#FFFFFF] items-end sm:justify-start justify-center">
+        <div className="static flex flex-row h-dvh w-full bg-[#EEDCBE] text-[#FFFFFF] items-end sm:justify-start justify-center">
             {/* Renderizando condicionalmente a div com animação de transição */}
             <div
                 className={`absolute h-[95vh] sm:h-[100vh] w-full sm:w-[30%] bg-white rounded-t-[60px] sm:rounded-tl-[0px] sm:rounded-r-[60px] z-[1] shadow-[10px_0px_51px_-7px_rgba(0,0,0,0.25)] transition-all duration-500 ease-in-out transform ${showSecondDiv ? "opacity-100 sm:-translate-x-full sm:-translate-y-[0] translate-y-full" : "opacity-100 sm:translate-x-0 translate-x-0]"
