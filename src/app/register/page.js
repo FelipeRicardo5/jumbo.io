@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Input from '../components/forms/input'
 import Button from '../components/forms/button'
@@ -26,9 +27,9 @@ export default function Register() {
                 alt="Imagem do autor"
             />
 
-            <div className="w-[80%] sm:w-[24vw] h-[55vh] sm:h-[60vh] bg-[#326377] sm:p-[2em] pl-[1em] pr-[1em] pt-[1em] pb-[1em] rounded-[20px]" style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
+            <div className="w-[80%] sm:w-[24vw] h-auto sm:h-[60vh] bg-[#326377] sm:p-[2em] pl-[2em] pr-[2em] pt-[1em] pb-[2em] rounded-[20px]" style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
 
-
+        
 
                 <p className="font-[700] text-[28px] sm:text-[36px] text-start sm:text-left" >cadastro</p>
 
@@ -53,10 +54,10 @@ export default function Register() {
                 />
                 <Button
                     text="registrar"
-                    className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] text-[12px] sm:text-[16px] sm:w-auto"
+                    className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] text-[16px] sm:text-[16px] sm:w-auto"
                 />
-                <p className="mt-[10px] text-left sm:text-left text-[#ffff] text-[13px]">
-                    se já nos conhecemos, faça o <br /><a href='/' className='text-[#BFAB59]' >login</a>!
+                <p className="mt-[10px] text-left sm:text-left text-[#ffff] text-[16px]">
+                    se já nos conhecemos, faça o <br /><Link href='/' className='text-[#BFAB59]' >login</Link>!
                 </p>
 
             </div>
@@ -82,7 +83,7 @@ export default function Register() {
                     src={jumboVetor}
                     width={0}
                     height={0}
-                    className="sm:w-[15%] sm:h-auto w-[50%] m-0 transform sm:translate-x-[30px] translate-y-[2.9vh] sm:translate-y-[0px]"
+                    className="sm:w-[15%] sm:h-auto w-[50%] m-0 transform sm:translate-x-[30px] translate-y-[0] sm:translate-y-[0px] sm:static absolute bottom-0"
                     alt="Imagem do Jumbo"
                 />
                 <Image

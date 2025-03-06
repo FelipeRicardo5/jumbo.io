@@ -42,15 +42,15 @@ export default function Login() {
                     type='password'
                 />
 
-                <p className="mt-[10px] text-center sm:text-left">
-                    se ainda não nos conhecemos, <br /><a href='/register' className='text-[#BFAB59]' >cadastre-se</a>!
-                </p>
 
                 <Button
                     text="entrar"
-                    className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-full sm:w-auto"
+                    className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] sm:w-auto text-[16px]"
                     href='/chat'
                 />
+                <p className="mt-[10px] text-left sm:text-left text-[16px]">
+                    se ainda não nos conhecemos, <br /><a href='/register' className='text-[#BFAB59]' >cadastre-se</a>!
+                </p>
             </div>
 
             {/* Imagem inferior responsiva */}
