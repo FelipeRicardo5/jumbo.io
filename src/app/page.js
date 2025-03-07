@@ -22,7 +22,7 @@ export default function Login() {
                 className='w-[70%] sm:w-[22vw]'
                 alt="Imagem do autor"
             />
-            <div className="w-[80%] sm:w-[24vw] h-[60vh] bg-[#326377] p-[2em] rounded-[20px]" style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
+            <div className="w-[80%] sm:w-[24vw] h-auto bg-[#326377] p-[2em] rounded-[20px]" style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
 
                 <p className="text-left">Já nos <br /> conhecemos?</p>
 
@@ -73,7 +73,7 @@ export default function Login() {
                     src={jumboVetor}
                     width={0}
                     height={0}
-                    className="sm:w-[15%] sm:h-auto w-[50%] m-0 transform translate-x-[30px]"
+                    className="sm:w-[15%] sm:h-auto w-[50%] m-0 transform translate-x-[30px] translate-y-[0] sm:translate-y-[0px] sm:static absolute bottom-0"
                     alt="Imagem do Jumbo"
                 />
                 <Image
