@@ -10,11 +10,13 @@ import jumboVetor from '../../../jumboassets/vetor/jumbovetor.png'
 export default function Register() {
 
     return (
-        <div className="flex flex-col h-dvh w-full bg-[#EEDCBE] text-[#FFFFFF] items-center">
+        <div className="flex flex-col h-[100dvh] w-full bg-[#EEDCBE] text-[#FFFFFF] items-center">
 
-            <div className="flex flex-col w-full h-[15vh] bg-[#EEDCBE] text-[#326377] justify-center items-center">
+            <div className="flex flex-col w-full h-[15dvh] bg-[#EEDCBE] text-[#326377] justify-center items-center">
+
                 <p className='text-[24px] sm:text-[30px]' >Olá, me chamo <strong>Jumbo!</strong></p>
                 <p className="text-center text-[12px] sm:text-[18px]">Seu melhor amigo no desenvolvimento pessoal</p>
+
             </div>
 
             {/* Imagem responsiva */}
@@ -27,7 +29,7 @@ export default function Register() {
                 alt="Imagem do autor"
             />
 
-            <div className="w-[80%] sm:w-[24vw] h-auto sm:h-[60vh] bg-[#326377] sm:p-[2em] pl-[2em] pr-[2em] pt-[1em] pb-[2em] rounded-[20px]" style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
+            <div className="w-[80%] sm:w-[24vw] h-auto sm:h-[60dvh] bg-[#326377] sm:p-[2em] pl-[2em] pr-[2em] pt-[1em] pb-[2em] rounded-[20px]" style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
 
         
 
@@ -63,7 +65,7 @@ export default function Register() {
             </div>
 
             {/* Imagem inferior responsiva */}
-            <div className="w-full h-[20vh] flex justify-center items-end sm:justify-end">
+            <div className="w-full h-[20dvh] flex justify-center items-end sm:justify-end">
 
                 <Image
                     src={grass}
@@ -83,7 +85,7 @@ export default function Register() {
                     src={jumboVetor}
                     width={0}
                     height={0}
-                    className="sm:w-[15%] sm:h-auto w-[50%] invisible sm:visible m-0 transform sm:translate-x-[30px] translate-y-[0] sm:translate-y-[0px] sm:static absolute bottom-0"
+                    className="sm:w-[15%] sm:h-auto w-[50%] invisible sm:visible m-0 transform sm:translate-x-[30px] translate-y-[0] sm:translate-y-[0px]"
                     alt="Imagem do Jumbo"
                 />
                 <Image

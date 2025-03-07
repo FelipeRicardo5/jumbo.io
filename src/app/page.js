@@ -8,52 +8,56 @@ import jumboVetor from '../../jumboassets/vetor/jumbovetor.png'
 
 export default function Login() {
     return (
-        <div className="flex flex-col h-dvh w-full bg-[#EEDCBE] text-[#FFFFFF] items-center">
+        <div className="flex flex-col h-[100dvh] w-full bg-[#EEDCBE] text-[#FFFFFF] items-center">
 
-                <p className='text-[24px] sm:text-[30px] text-[#326377] mt-[15%] sm:mt-[1em]'>Olá, me chamo <strong>Jumbo!</strong></p>
+            <div className="flex flex-col w-full h-[15dvh] bg-[#EEDCBE] text-[#326377] justify-center items-center">
 
+                <p className='text-[24px] sm:text-[30px]' >Olá, me chamo <strong>Jumbo!</strong></p>
+                <p className="text-center text-[12px] sm:text-[18px]">Seu melhor amigo no desenvolvimento pessoal</p>
 
-            {/* Imagem responsiva */}
+            </div>
 
-            <Image
-                src={grass}
-                width={0}
-                height={0}
-                className='w-[70%] sm:w-[22vw]'
-                alt="Imagem do autor"
-            />
-            <div className="w-[80%] sm:w-[24vw] h-auto bg-[#326377] p-[2em] rounded-[20px]" style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
-
-                <p className="text-left">Já nos <br /> conhecemos?</p>
-
-                <p className="font-[700] text-[24px] sm:text-[36px] text-left" >Login</p>
-
-                <p className="mt-[20px]">usuário</p>
-                <Input
-                    placeholder="insira seu usuário aqui..."
-                    className="mt-[10px]"
+            <div className="flex flex-col w-[100%] h-[65dvh] items-center rounded-[20px]" style={{ bxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
+                <Image
+                    src={grass}
+                    width={0}
+                    height={0}
+                    className='w-[70%] sm:w-[22vw] h-[13%]'
+                    alt="Imagem do autor"
                 />
+                <div className="w-[80%] sm:w-[24%] h-[100%] bg-[#326377] p-[2em] rounded-[20px] " style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }} >
 
-                <p className="mt-[20px]">senha</p>
-                <Input
-                    placeholder="insira sua senha aqui..."
-                    className="mt-[10px]"
-                    type='password'
-                />
+                    <p className="text-left">Já nos <br /> conhecemos?</p>
+
+                    <p className="font-[700] text-[24px] sm:text-[36px] text-left" >Login</p>
+
+                    <p className="mt-[20px]">usuário</p>
+                    <Input
+                        placeholder="insira seu usuário aqui..."
+                        className="mt-[10px]"
+                    />
+
+                    <p className="mt-[20px]">senha</p>
+                    <Input
+                        placeholder="insira sua senha aqui..."
+                        className="mt-[10px]"
+                        type='password'
+                    />
 
 
-                <Button
-                    text="entrar"
-                    className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] sm:w-auto text-[16px]"
-                    href='/chat'
-                />
-                <p className="mt-[10px] text-left sm:text-left sm:text-[16px] text-[14px]">
-                    se ainda não nos conhecemos, <br /><a href='/register' className='text-[#BFAB59]' >cadastre-se</a>!
-                </p>
+                    <Button
+                        text="entrar"
+                        className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] sm:w-auto text-[16px]"
+                        href='/chat'
+                    />
+                    <p className="mt-[10px] text-left sm:text-left sm:text-[16px] text-[14px]">
+                        se ainda não nos conhecemos, <br /><a href='/register' className='text-[#BFAB59]' >cadastre-se</a>!
+                    </p>
+                </div>
             </div>
 
             {/* Imagem inferior responsiva */}
-            <div className="w-full h-[20vh] flex justify-center items-end sm:justify-end">
+            <div className="w-full h-[20dvh] flex justify-center items-end sm:justify-end">
 
                 <Image
                     src={grass}
@@ -73,7 +77,7 @@ export default function Login() {
                     src={jumboVetor}
                     width={0}
                     height={0}
-                    className="sm:w-[15%] h-auto w-[50%] m-0 transform sm:translate-x-[30px] translate-y-[0] sm:translate-y-[0px] sm:static absolute bottom-0"
+                    className="w-auto h-[20dvh] m-0 transform sm:translate-x-[30px]"
                     alt="Imagem do Jumbo"
                 />
                 <Image
