@@ -56,7 +56,7 @@ export default function Register() {
                     text="registrar"
                     className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] text-[16px] sm:text-[16px] sm:w-auto"
                 />
-                <p className="mt-[10px] text-left sm:text-left text-[#ffff] text-[16px]">
+                <p className="mt-[10px] text-left sm:text-left text-[#ffff] sm:text-[16px] text-[14px]">
                     se já nos conhecemos, faça o <br /><Link href='/' className='text-[#BFAB59]' >login</Link>!
                 </p>
 
@@ -83,7 +83,7 @@ export default function Register() {
                     src={jumboVetor}
                     width={0}
                     height={0}
-                    className="sm:w-[15%] sm:h-auto w-[50%] m-0 transform sm:translate-x-[30px] translate-y-[0] sm:translate-y-[0px] sm:static absolute bottom-0"
+                    className="sm:w-[15%] sm:h-auto w-[50%] invisible sm:visible m-0 transform sm:translate-x-[30px] translate-y-[0] sm:translate-y-[0px] sm:static absolute bottom-0"
                     alt="Imagem do Jumbo"
                 />
                 <Image

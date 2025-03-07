@@ -10,9 +10,8 @@ export default function Login() {
     return (
         <div className="flex flex-col h-dvh w-full bg-[#EEDCBE] text-[#FFFFFF] items-center">
 
-            <div className="flex w-full h-[15vh] bg-[#EEDCBE] text-[#326377] justify-center items-center">
-                <p className='text-[24px] sm:text-[30px]'>Olá, me chamo <strong>Jumbo!</strong></p>
-            </div>
+                <p className='text-[24px] sm:text-[30px] text-[#326377] mt-[15%] sm:mt-[1em]'>Olá, me chamo <strong>Jumbo!</strong></p>
+
 
             {/* Imagem responsiva */}
 
@@ -48,7 +47,7 @@ export default function Login() {
                     className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] sm:w-auto text-[16px]"
                     href='/chat'
                 />
-                <p className="mt-[10px] text-left sm:text-left text-[16px]">
+                <p className="mt-[10px] text-left sm:text-left sm:text-[16px] text-[14px]">
                     se ainda não nos conhecemos, <br /><a href='/register' className='text-[#BFAB59]' >cadastre-se</a>!
                 </p>
             </div>

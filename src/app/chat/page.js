@@ -54,7 +54,7 @@ export default function Chat() {
         >
             {/* Renderizando condicionalmente a div com animação de transição */}
             <div
-                className={`absolute h-[95vh] sm:h-[100vh] w-full sm:w-[30%] bg-white rounded-t-[60px] sm:rounded-tl-[0px] sm:rounded-r-[60px] z-[1] shadow-[10px_0px_51px_-7px_rgba(0,0,0,0.25)] transition-all duration-500 ease-in-out transform ${showSecondDiv ? "opacity-100 sm:-translate-x-full sm:-translate-y-[0] translate-y-full" : "opacity-100 sm:translate-x-0 translate-x-0]"
+                className={`absolute h-[90vh] sm:h-[100vh] w-full sm:w-[30%] bg-white rounded-t-[60px] sm:rounded-tl-[0px] sm:rounded-r-[60px] z-[1] shadow-[10px_0px_51px_-7px_rgba(0,0,0,0.25)] transition-all duration-500 ease-in-out transform ${showSecondDiv ? "opacity-100 sm:-translate-x-full sm:-translate-y-[0] translate-y-full" : "opacity-100 sm:translate-x-0 translate-x-0]"
                     }`}
             >
                 <section className='flex items-center p-[1em]'>
