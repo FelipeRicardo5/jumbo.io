@@ -53,7 +53,7 @@ export default function Login() {
             </div>
 
             {/* Imagem inferior responsiva */}
-            <div className="w-full h-[30vh] flex justify-center items-end sm:justify-end">
+            <div className="w-full h-[20vh] flex justify-center items-end sm:justify-end">
 
                 <Image
                     src={grass}
@@ -73,7 +73,7 @@ export default function Login() {
                     src={jumboVetor}
                     width={0}
                     height={0}
-                    className="sm:w-[15%] sm:h-auto w-[50%] m-0 transform translate-x-[30px] translate-y-[0] sm:translate-y-[0px] sm:static absolute bottom-0"
+                    className="sm:w-[15%] h-auto w-[50%] m-0 transform sm:translate-x-[30px] translate-y-[0] sm:translate-y-[0px] sm:static absolute bottom-0"
                     alt="Imagem do Jumbo"
                 />
                 <Image
