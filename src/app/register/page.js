@@ -19,7 +19,7 @@ export default function Register() {
             </div>
 
 
-            <div className="flex flex-col w-[100%] h-[65dvh] items-center rounded-[20px]" style={{ bxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
+            <div className="flex flex-col w-[100%] sm:h-[65dvh] h-auto items-center rounded-[20px]" style={{ bxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
 
                 <Image
                     src={grass}
@@ -29,7 +29,7 @@ export default function Register() {
                     alt="Imagem do autor"
                 />
 
-                <div className="w-[80%] sm:w-[24%] h-[100%] bg-[#326377] p-[2em] rounded-[20px] " style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }} >
+                <div className="w-[80%] sm:w-[24%] h-[100%] bg-[#326377] pt-[1em] pb-[1em] sm:pl-[2em] sm:pr-[2em] pl-[1.5em] pr-[1.5em] rounded-[20px] " style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }} >
 
                     <p className="font-[700] text-[28px] sm:text-[36px] text-start sm:text-left" >cadastro</p>
 
@@ -56,15 +56,17 @@ export default function Register() {
                         text="registrar"
                         className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] text-[16px] sm:text-[16px] sm:w-auto"
                     />
+
                     <p className="mt-[10px] text-left sm:text-left text-[#ffff] sm:text-[16px] text-[14px]">
                         se já nos conhecemos, faça o <br /><Link href='/' className='text-[#BFAB59]' >login</Link>!
                     </p>
 
+
                 </div>
             </div>
 
-           
-            <div className="w-full h-[20dvh] flex justify-center items-end sm:justify-end">
+
+            <div className="w-full sm:h-[20dvh] h-auto flex justify-center items-end sm:justify-end">
 
                 <Image
                     src={grass}

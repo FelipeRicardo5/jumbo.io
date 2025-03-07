@@ -34,11 +34,11 @@ export default function Chat() {
         } else {
             document.body.style.overflow = 'auto';
         }
-        
+
         return () => {
             document.body.style.overflow = 'auto';
         };
-    }, [showSecondDiv]);   
+    }, [showSecondDiv]);
 
 
     const handleClick = () => {
@@ -49,30 +49,32 @@ export default function Chat() {
     const resultado = 'concluido';
 
     return (
-        <div  className="static flex flex-row h-dvh w-full text-[#FFFFFF] items-end sm:justify-start justify-center bg-cover bg-center" 
-        style={{ backgroundImage: `url('${resultado === "concluido" ? '/background-happy-blur.jpg' : '/background-angry-blur.jpg'}')` }}
+        <div className="static flex flex-row h-dvh w-full text-[#FFFFFF] items-end sm:justify-start justify-center bg-cover bg-center"
+            style={{ backgroundImage: `url('${resultado === "concluido" ? '/background-happy-blur.jpg' : '/background-angry-blur.jpg'}')` }}
         >
             {/* Renderizando condicionalmente a div com animação de transição */}
             <div
-                className={`absolute h-[95dvh] sm:h-[100dvh] w-full sm:w-[30%] bg-white rounded-t-[60px] sm:rounded-tl-[0px] sm:rounded-r-[60px] z-[1] shadow-[10px_0px_51px_-7px_rgba(0,0,0,0.25)] transition-all duration-500 ease-in-out transform ${showSecondDiv ? "opacity-100 sm:-translate-x-full sm:-translate-y-[0] translate-y-full" : "opacity-100 sm:translate-x-0 translate-x-0]"
+                className={`absolute h-[98dvh] sm:h-[100dvh] w-full sm:w-[30%] bg-white rounded-t-[60px] sm:rounded-tl-[0px] sm:rounded-r-[60px] z-[1] shadow-[10px_0px_51px_-7px_rgba(0,0,0,0.25)] transition-all duration-500 ease-in-out transform ${showSecondDiv ? "opacity-100 sm:-translate-x-full sm:-translate-y-[0] translate-y-full" : "opacity-100 sm:translate-x-0 translate-x-0]"
                     }`}
             >
-                <section className='flex items-center p-[1em]'>
+                <section className='flex items-center pl-[2em] pr-[0em] pt-[1em] pb-[1em]'>
                     <Image
                         src={profileJumbo}
                         alt='profileJumbo'
                         width={80}
                         height={80}
+                        className='sm:w-[80px] sm:h-[80px] w-[50px] h-[50px]'
                     />
                     <Image
                         src={arrow}
                         alt='arrow'
                         width={40}
                         height={40}
+                        className='sm:w-[40px] sm:h-[40px] w-[30px] h-[30px]'
                     />
                     <div>
-                        <p className='text-[26px] text-[#5686E1] font-[700]'>Jumbo.io</p>
-                        <p className='text-[#5686E1]'>chat</p>
+                        <p className='sm:text-[24px] text-[18px] text-[#5686E1] font-[700]'>Jumbo.io</p>
+                        <p className='sm:text-[20px] text-[14px] text-[#5686E1]'>chat</p>
                     </div>
                 </section>
                 <section>
