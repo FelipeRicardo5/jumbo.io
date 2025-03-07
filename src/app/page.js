@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Input from './components/forms/input'
 import Button from './components/forms/button'
@@ -53,7 +54,7 @@ export default function Login() {
                         href='/chat'
                     />
                     <p className="mt-[10px] text-left sm:text-left sm:text-[16px] text-[14px]">
-                        se ainda não nos conhecemos, <br /><a href='/register' className='text-[#BFAB59]' >cadastre-se</a>!
+                        se ainda não nos conhecemos, <br /><Link href='/register' className='text-[#BFAB59]' >cadastre-se</Link>!
                     </p>
                 </div>
             </div>
