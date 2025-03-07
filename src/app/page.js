@@ -18,6 +18,7 @@ export default function Login() {
             </div>
 
             <div className="flex flex-col w-[100%] h-[65dvh] items-center rounded-[20px]" style={{ bxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }}>
+                
                 <Image
                     src={grass}
                     width={0}
@@ -25,6 +26,7 @@ export default function Login() {
                     className='w-[70%] sm:w-[22vw] h-[13%]'
                     alt="Imagem do autor"
                 />
+
                 <div className="w-[80%] sm:w-[24%] h-[100%] bg-[#326377] p-[2em] rounded-[20px] " style={{ boxShadow: '0px 17px 38px -5px rgba(0,0,0,0.65)' }} >
 
                     <p className="text-left">Já nos <br /> conhecemos?</p>
@@ -56,7 +58,6 @@ export default function Login() {
                 </div>
             </div>
 
-            {/* Imagem inferior responsiva */}
             <div className="w-full h-[20dvh] flex justify-center items-end sm:justify-end">
 
                 <Image
@@ -77,7 +78,7 @@ export default function Login() {
                     src={jumboVetor}
                     width={0}
                     height={0}
-                    className="w-auto h-[20dvh] m-0 transform sm:translate-x-[30px]"
+                    className="w-auto h-[20dvh] m-0 transform hidden md:block sm:translate-x-[30px]"
                     alt="Imagem do Jumbo"
                 />
                 <Image
