@@ -8,12 +8,12 @@
   "theme_color": "#5686E1",
   "icons": [
     {
-      "src": "../jumboassets/icons/iconJumbo.jpg",
+      "src": "/iconJumbo.jpg",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "../jumboassets/icons/iconJumbo.jpg",
+      "src": "/iconJumbo.jpg",
       "sizes": "512x512",
       "type": "image/png"
     }
