@@ -1,19 +1,22 @@
 import Image from "next/image"
-import profile from '../../../../jumboassets/vetor/profileUser.png'
+import Profile from '../../../../jumboassets/icons/iconJumbo.jpg'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-export default function MessageBox() {
+export default function MessageBox({ botMessage }) {
     return (
-        <div className="flex w-[100%] h-auto items-start" >
-                {/* <Image
-                        src={profile}
+        <div className="flex w-[100%] h-auto items-start mb-2" >
+            <Image
+                        src={Profile}
                         alt="user"
-                        className="w-[100%]"
-                    /> */}
-                <i className="bi bi-person-circle text-[35px] text-[#5686E1] mr-[0.2em] ml-[0.5em] mb-[1em] -translate-y-[10px]"></i>
-         
-            <div className="bg-[#5686E1] w-[80%] h-[100%] p-[0.7em] bg-[#5686E1] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px] drop-shadow-xl" >
-                Olá! seja bem vindo, estou aqui para ajudar. O que deseja?
+                        className="w-[10%] rounded-full drop-shadow-xl mr-2"
+                    />
+            
+            <div className=" w-[100%] h-[100%] text-[#5686E1] font-bold text-[12px] sm:text-[18px]" >
+                Jumbo.io
+                <div className="bg-[#5686E1] text-white text-[12px] sm:text-[18px] w-[100%] font-light h-[100%] p-[0.7em] bg-[#5686E1] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px] drop-shadow-xl border-[1px] border-white" >
+                    {botMessage}
+                </div>
+
             </div>
 
         </div>
