@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -8,6 +11,19 @@ import grass from '../../jumboassets/vetor/grass.png'
 import jumboVetor from '../../jumboassets/vetor/jumbovetor.png'
 
 export default function Login() {
+
+    useEffect(() => {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("/sw.js")
+            .then((registration) => {
+              console.log("Service Worker registrado com sucesso:", registration);
+            })
+            .catch((error) => {
+              console.log("Falha ao registrar o Service Worker:", error);
+            });
+        }
+      }, []);
+
     return (
         <div className="flex flex-col h-[100dvh] w-full bg-[#EEDCBE] text-[#FFFFFF] items-center">
 

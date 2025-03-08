@@ -97,6 +97,7 @@ export default function Chat() {
                         botMessage={'Olá! seja bem vindo, estou aqui para te desafiar! Como você está se sentindo hoje?'}
                     />
                     <MessageBoxUser
+                        nameUser={'Fátima'}
                         userMessage={'animado e energético 💪'}
                     />
                     <MessageBox
