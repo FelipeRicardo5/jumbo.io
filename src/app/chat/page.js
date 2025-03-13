@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
+
 import MessageBoxUser from '../components/forms/messageBoxUser';
 import MessageBox from '../components/forms/messageBox';
 import InputMessage from '../components/forms/inputMessage';
@@ -16,19 +17,71 @@ import profileJumbo from '../../../jumboassets/icons/iconJumbo.jpg'
 import arrow from '../../../jumboassets/vetor/arrow.png'
 import jumboHappy from '../../../jumboassets/jumboHappy.webp'
 import jumboAngry from '../../../jumboassets/jumboAngry.webp'
-
-
+import jumboSad from '../../../jumboassets/jumboSad.webp'
+import Loading from '../../../jumboassets/bouncing-circles.svg'
 
 
 export default function Chat() {
 
-    const [messages, setMessages] = useState([])
+    const [messages, setMessages] = useState([]);
+    const [mood, setMood] = useState('');
+    const [challenge, setChallenge] = useState('');
+    const [challengeStatus, setChallengeStatus] = useState('');
+    const [showSecondDiv, setShowSecondDiv] = useState(false);
 
     const concluirDesafio = (status) => {
-        setResultado(status ? "concluido" : "nao_concluido");
+        setChallengeStatus(status ? "concluido" : "nao_concluido");
     };
 
-    const [showSecondDiv, setShowSecondDiv] = useState(false);
+    const sendMood = async (selectedMood) => {
+        setMood(selectedMood);
+        setMessages((prevMessages) => [
+            ...prevMessages,
+            { from: 'user', text: selectedMood }
+        ]);
+
+        const response = await fetch('http://localhost:3030/ia', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ mood: selectedMood })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            setChallenge(data.challenge);
+            setMessages((prevMessages) => [
+                ...prevMessages,
+                { from: 'bot', text: data.challenge }
+            ]);
+        } else {
+            setMessages((prevMessages) => [
+                ...prevMessages,
+                { from: 'bot', text: 'Erro ao gerar desafio' }
+            ]);
+        }
+    };
+
+
+    const handleChallengeStatus = (status) => {
+        setChallengeStatus(status);
+        const statusMessage = status === "concuido" ? "Incrível! To muito feliz parabéns." : "Desafio não concluído";
+        setMessages([
+            ...messages,
+            { from: 'user', text: statusMessage }
+        ]);
+    }
+
+    useEffect(() => {
+        if (messages.length === 0) {
+            setMessages([
+                ...messages,
+                { from: 'bot', text: 'Olá! seja bem vindo, estou aqui para te desafiar! Como você está se sentindo hoje?' }
+            ]);
+        }
+    }, [messages]);
+
 
     useEffect(() => {
         if (showSecondDiv) {
@@ -56,11 +109,12 @@ export default function Chat() {
         console.log(setShowSecondDiv, showSecondDiv);
     };
 
-    const resultado = 'concluido';
+
+    const resultImage = mood === "poderia estar melhor 😔" ? jumboSad : mood === "tive um dia difícil 😡" ? jumboAngry : jumboHappy;
 
     return (
         <div className="static flex flex-row h-dvh w-full text-[#FFFFFF] items-end sm:justify-start justify-center bg-cover bg-center"
-            style={{ backgroundImage: `url('${resultado === "concluido" ? '/background-happy-blur.jpg' : '/background-angry-blur.jpg'}')` }}
+            style={{ backgroundImage: `url('${(mood === "poderia estar melhor 😔" || mood === "tive um dia difícil 😡") ? '/background-angry-blur.jpg' : '/background-happy-blur.jpg'}')` }}
         >
             {/* Renderizando condicionalmente a div com animação de transição */}
             <div
@@ -88,36 +142,59 @@ export default function Chat() {
                     </div>
                 </section>
                 <section className="relative overflow-y-auto max-h-[58dvh] sm:max-h-[65dvh] px-4 " style={{ scrollbarWidth: 'thin' }}>
-                    {/* {messages.map((_, index) => (
-                        <MessageBox key={index} />
-                    ))} */}
                     <div className="sticky z-[1] top-0 left-0 w-full h-10 bg-gradient-to-b from-white to-transparent pointer-events-none"></div>
+                    {/* Gradient */}
 
-                    <MessageBox
-                        botMessage={'Olá! seja bem vindo, estou aqui para te desafiar! Como você está se sentindo hoje?'}
-                    />
-                    <MessageBoxUser
-                        nameUser={'Fátima'}
-                        userMessage={'animado e energético 💪'}
-                    />
-                    <MessageBox
-                        botMessage={'Ótimo, o que acha de correr 2km hoje à tarde?'}
-                    />
+                    {
+                        messages.length === 0 ? (
+                            <div className="flex w-full h-full justify-center items-center">
+                                <p className="text-[#5686E1] text-[18px]">Carregando...</p>
+                            </div>
+                        ) : (
+                            messages.map((message, index) => (
+                                message.from === "bot" ? (
+                                    <MessageBox key={index} botMessage={message.text} /> // Renderiza a mensagem do bot
+                                ) : (
+                                    // Verifica se a última mensagem foi do usuário e não do bot, e exibe os três pontinhos
+                                    index === messages.length - 1 && message.from === "user" ? (
+                                        <div key={index} className="text-center">
+                                            <MessageBoxUser key={index} nameUser="Fátima" userMessage={message.text} />
+                                            <div className='ml-[20]' >
+                                                <Image
+                                                    src={Loading}
+                                                    alt="loading"
+                                                    width={50}
+                                                    height={50}
+                                                />
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <MessageBoxUser key={index} nameUser="Fátima" userMessage={message.text} /> // Renderiza a mensagem do usuário
+                                    )
+                                )
+                            ))
+                        )
+                    }
+
 
                     <div className="sticky absolute z-[2] bottom-0 left-0 w-full h-10 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
                 </section>
                 <section className="flex bg-white w-full justify-center" >
 
                     <InputMessage
-                        inputUser={'animado e energético 💪'}
-                    />
-                    <InputMessage
-                        inputUser={'poderia estar melhor 😔'}
-                    />
-                    <InputMessage
-                        inputUser={'tive um dia difícil 😭'}
+                        onClick={() => sendMood('animado e energético 💪')}
+                        inputUser='animado e energético 💪'
                     />
 
+                    <InputMessage
+                        onClick={() => sendMood('poderia estar melhor 😔')}
+                        inputUser='poderia estar melhor 😔'
+                    />
+
+                    <InputMessage
+                        inputUser="tive um dia difícil 😡"
+                        onClick={() => sendMood('tive um dia difícil 😡')}
+                    />
 
                 </section>
             </div>
@@ -137,7 +214,7 @@ export default function Chat() {
                 ></div> */}
 
                 <Image
-                    src={resultado === "concluido" ? jumboHappy : jumboAngry}
+                    src={resultImage}
                     width={0}
                     height={0}
                     style={{ borderRadius: '250px', boxShadow: '0px 23px 45px -7px rgba(0,0,0,0.33)' }}

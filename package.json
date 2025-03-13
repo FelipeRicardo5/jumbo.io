@@ -2,14 +2,21 @@
   "name": "jumboapp",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "chat": "node api.js"
   },
   "dependencies": {
+    "axios": "^1.8.2",
     "bootstrap-icons": "^1.11.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "marked": "^15.0.7",
     "next": "15.1.7",
     "next-pwa": "^5.6.0",
     "react": "^19.0.0",
