@@ -21,12 +21,12 @@ app.post('/ia', async (req, res) => {
     let prompt = '';
 
     if (mood === 'animado e energético 💪') {
-    prompt = 'Não precisa se apresentar ja te conheço você é um mascote motivacional chamado Jumbo. Dê um desafio curto, difícil, relacionado ao bem-estar, que eu possa completar rapidamente.';
+    prompt = 'Com no máximo 200 caracteres retorne sem aspas, você é um incentivador motivacional. Dê um desafio curto, difícil, relacionado ao bem-estar, que eu possa completar rapidamente.';
     } 
     else if (mood === 'poderia estar melhor 😔') {
-        prompt = 'Não precisa se apresentar ja te conheço você é um incentivador motivacional. Dê-me um desafio moderado de bem-estar que eu possa fazer rapidamente.';
+        prompt = 'Com no máximo 200 caracteres retorne sem aspas, você é um incentivador motivacional. Dê-me um desafio moderado de bem-estar que eu possa fazer rapidamente texto sem aspas.';
     } else if (mood === 'tive um dia difícil 😡') {
-        prompt = 'De forma figurativa me diga que está com raiva 😡 (é uma piada) Dê-me um desafio fácil, rápido e relacionado ao bem-estar para ajudar a melhorar minha condição.';
+        prompt = 'Com no máximo 200 caracteres retorne sem aspas, Dê-me um desafio fácil, rápido e relacionado ao bem-estar para ajudar a melhorar minha condição.';
     } else {
         return res.status(400).json({ error: 'Mood inválido' });
     }
