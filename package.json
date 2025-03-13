@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/cors": "^2.8.17",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "postcss": "^8",
