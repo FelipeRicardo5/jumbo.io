@@ -29,7 +29,7 @@ export default function Chat() {
     const [challengeStatus, setChallengeStatus] = useState('');
     const [showSecondDiv, setShowSecondDiv] = useState(false);
 
-    const urlApi = process.env.NEXT_PUBLIC_API_URL || 'https://jumbo-io-api.onrender.com';
+    const urlApi = process.env.NEXT_PUBLIC_API_URL || 'https://jumbo-io-api.onrender.com/ia';
 
     const concluirDesafio = (status) => {
         setChallengeStatus(status ? "concluido" : "nao_concluido");
