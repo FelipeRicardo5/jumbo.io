@@ -29,6 +29,8 @@ export default function Chat() {
     const [challengeStatus, setChallengeStatus] = useState('');
     const [showSecondDiv, setShowSecondDiv] = useState(false);
 
+    const urlApi = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3030/ia';
+
     const concluirDesafio = (status) => {
         setChallengeStatus(status ? "concluido" : "nao_concluido");
     };
@@ -40,8 +42,8 @@ export default function Chat() {
             { from: 'user', text: selectedMood }
         ]);
 
-        const response = await fetch('http://localhost:3030/ia', {
-            method: 'POST',
+        const response = await fetch(urlApi, {
+            method: 'POST', // Método HTTP de envio da requisição (POST) 
             headers: {
                 'Content-Type': 'application/json'
             },

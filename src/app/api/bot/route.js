@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 export default async function handler(req, res) {
+
     const { mood } = req.body;
+    const urlApi = process.env.IA_API_URL || 'http://localhost:11434/api/generate';
 
     if (!mood || typeof mood !== 'string' || mood.trim() === '') {
         return res.status(400).json({ error: 'Texto inválido' });
@@ -21,7 +23,7 @@ export default async function handler(req, res) {
         }
 
     try {
-        const response = await axios.post('http://localhost:11434/api/generate', {
+        const response = await axios.post(urlApi, {
             model: 'llama3.2',
             prompt,
             stream: false,

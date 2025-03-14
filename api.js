@@ -7,6 +7,7 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3030;
+const urlApi = process.env.IA_API_URL || 'http://localhost:11434/api/generate';
 
 app.use(cors());
 app.use(json());
@@ -32,7 +33,7 @@ app.post('/ia', async (req, res) => {
     }
 
     try {
-        const response = await axios.post('http://localhost:11434/api/generate', {
+        const response = await axios.post(urlApi, {
             model: 'llama3.2',
             prompt,
             stream: false,
