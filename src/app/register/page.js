@@ -55,6 +55,7 @@ export default function Register() {
                     <Button
                         text="registrar"
                         className="bg-gradient-to-b from-[#998740] to-[#BFAB59] px-[20px] mt-6 w-[50%] text-[16px] sm:text-[16px] sm:w-auto"
+                        href='/avatar'
                     />
 
                     <p className="mt-[10px] text-left sm:text-left text-[#ffff] sm:text-[16px] text-[14px]">
